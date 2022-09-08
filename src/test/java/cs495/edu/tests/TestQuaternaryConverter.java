@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 public class TestQuaternaryConverter {
+    QuaternaryConverter converter = new QuaternaryConverter();
     @ParameterizedTest
     @CsvSource(delimiter = '|', value = {
             "210 | 3102",
@@ -14,7 +15,7 @@ public class TestQuaternaryConverter {
             "20077 | 10321231"
     })
     public void testToDecimal(int expected, String quaternary) {
-        Assertions.assertEquals(expected, QuaternaryConverter.toDecimal(quaternary));
+        Assertions.assertEquals(expected, converter.toDecimal(quaternary));
     }
 
     @ParameterizedTest
@@ -25,6 +26,6 @@ public class TestQuaternaryConverter {
             "10321231 | 20077"
     })
     public void testToQuaternary(String expected, int baseTen) {
-        Assertions.assertEquals(expected, QuaternaryConverter.toQuaternary(baseTen));
+        Assertions.assertEquals(expected, converter.toQuaternary(baseTen));
     }
 }

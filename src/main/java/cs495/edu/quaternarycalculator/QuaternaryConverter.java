@@ -1,7 +1,7 @@
 package cs495.edu.quaternarycalculator;
 
 public class QuaternaryConverter {
-    public static int toDecimal(String quaternaryString)  {
+    public int toDecimal(String quaternaryString)  {
         int decimalValue = 0;
         for (int i = 0; i < quaternaryString.length(); i++) {
             int quaternaryNumber = Character.getNumericValue(quaternaryString.charAt(i));
@@ -10,7 +10,7 @@ public class QuaternaryConverter {
         return decimalValue;
     }
 
-    public static String toQuaternary(int baseTenNumber) {
+    public String toQuaternary(int baseTenNumber) {
         StringBuilder quaternary = new StringBuilder();
         while (baseTenNumber != 0) {
             int remainder = baseTenNumber % 4;
