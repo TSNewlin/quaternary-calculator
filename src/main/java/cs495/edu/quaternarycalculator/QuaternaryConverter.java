@@ -9,4 +9,9 @@ public class QuaternaryConverter {
         }
         return decimalValue;
     }
+
+    public static String toQuaternary(int baseTenNumber) {
+        String quaternary = "";
+        return quaternary;
+    }
 }

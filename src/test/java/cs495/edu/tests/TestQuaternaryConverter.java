@@ -16,4 +16,15 @@ public class TestQuaternaryConverter {
     public void testToDecimal(int expected, String quaternary) {
         Assertions.assertEquals(expected, QuaternaryConverter.toDecimal(quaternary));
     }
+
+    @ParameterizedTest
+    @CsvSource(delimiter = '|', value = {
+            "3102 | 210",
+            "31032 | 846",
+            "1321 | 121",
+            "10321231 | 20077"
+    })
+    public void testToQuaternary(String expected, int baseTen) {
+        Assertions.assertEquals(expected, QuaternaryConverter.toQuaternary(baseTen));
+    }
 }
