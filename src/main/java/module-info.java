@@ -1,8 +1,8 @@
-module com.example.quaternarycalculator {
+module cs495.edu.quaternarycalculator {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens com.example.quaternarycalculator to javafx.fxml;
-    exports com.example.quaternarycalculator;
+    opens cs495.edu.quaternarycalculator to javafx.fxml;
+    exports cs495.edu.quaternarycalculator;
 }

@@ -1,4 +1,4 @@
-package com.example.quaternarycalculator;
+package cs495.edu.quaternarycalculator;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -24,8 +24,8 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainModule = 'com.example.quaternarycalculator'
-    mainClass = 'com.example.quaternarycalculator.QuaternaryCalculator'
+    mainModule = 'cs495.edu.quaternarycalculator'
+    mainClass = 'cs495.edu.quaternarycalculator.QuaternaryCalculator'
 }
 
 javafx {
