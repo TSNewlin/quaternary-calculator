@@ -11,7 +11,12 @@ public class QuaternaryConverter {
     }
 
     public static String toQuaternary(int baseTenNumber) {
-        String quaternary = "";
-        return quaternary;
+        StringBuilder quaternary = new StringBuilder();
+        while (baseTenNumber != 0) {
+            int remainder = baseTenNumber % 4;
+            baseTenNumber = baseTenNumber / 4;
+            quaternary.insert(0, remainder);
+        }
+        return quaternary.toString();
     }
 }
