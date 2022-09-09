@@ -1,14 +1,20 @@
 package cs495.edu.quaternarycalculator;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.event.ActionEvent;
 
 public class QuaternaryCalculatorController {
-    @FXML
-    private Label welcomeText;
+    private String displayedQuaternary = "";
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private TextField numberDisplay;
+
+    @FXML
+    protected void onNumberButtonCLick(ActionEvent event) {
+        Button buttonPressed = (Button) event.getSource();
+        displayedQuaternary += buttonPressed.getText();
+        numberDisplay.setText(displayedQuaternary);
     }
 }
