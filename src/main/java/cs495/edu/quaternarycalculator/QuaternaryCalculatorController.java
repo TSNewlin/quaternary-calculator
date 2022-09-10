@@ -50,10 +50,26 @@ public class QuaternaryCalculatorController {
 
     @FXML
     protected void onEqualButtonClick() {
+        NumberCalculator calculator = new NumberCalculator();
+        switch (operation) {
+            case "+" -> {
+                displayedQuaternary = calculator.add(prevQuaternary, displayedQuaternary);
+                numberDisplay.setText(displayedQuaternary);
+            }
+            case "-" -> {
+                displayedQuaternary = calculator.subtract(prevQuaternary, displayedQuaternary);
+                numberDisplay.setText(displayedQuaternary);
+            }
+            case "*" -> {
+                displayedQuaternary = calculator.multiply(prevQuaternary, displayedQuaternary);
+                numberDisplay.setText(displayedQuaternary);
+            }
+            case "/" -> {
+                displayedQuaternary = calculator.divide(prevQuaternary, displayedQuaternary);
+                numberDisplay.setText(displayedQuaternary);
+            }
+        }
         newOperation = true;
-        numberDisplay.setText(prevQuaternary + " " + operation + " " + displayedQuaternary);
-        prevQuaternary = "";
-        displayedQuaternary = "";
         toggleOperations();
     }
 
