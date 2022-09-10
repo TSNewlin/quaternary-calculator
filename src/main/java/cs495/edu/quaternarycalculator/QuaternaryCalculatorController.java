@@ -5,11 +5,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
 
+import java.util.Objects;
+
 public class QuaternaryCalculatorController {
     private String displayedQuaternary = "";
     private String prevQuaternary = "";
     private String operation = "";
     private boolean newOperation = true;
+    private boolean viewingDecimal = false;
 
     @FXML
     private TextField numberDisplay;
@@ -25,6 +28,16 @@ public class QuaternaryCalculatorController {
     private Button squared;
     @FXML
     private Button squareRoot;
+    @FXML
+    private Button equals;
+    @FXML
+    private Button zero;
+    @FXML
+    private Button one;
+    @FXML
+    private Button two;
+    @FXML
+    private Button three;
 
     @FXML
     protected void onNumberButtonCLick(ActionEvent event) {
@@ -73,6 +86,20 @@ public class QuaternaryCalculatorController {
         toggleOperations();
     }
 
+    @FXML
+    protected void onConvertButtonClick() {
+        if (Objects.equals(displayedQuaternary, "undefined")) return;
+        if (!viewingDecimal && !displayedQuaternary.isEmpty()) {
+            disableAllButtons();
+            viewingDecimal = true;
+            int decimal = Integer.parseInt(displayedQuaternary, 4);
+            numberDisplay.setText(Integer.toString(decimal, 10));
+        } else if (viewingDecimal && !displayedQuaternary.isEmpty()) {
+            enableAllButtons();
+            viewingDecimal = false;
+            numberDisplay.setText(displayedQuaternary);
+        }
+    }
 
     private void toggleOperations() {
         addition.setDisable(!addition.isDisable());
@@ -81,5 +108,33 @@ public class QuaternaryCalculatorController {
         division.setDisable(!division.isDisable());
         squared.setDisable(!squared.isDisable());
         squareRoot.setDisable(!squareRoot.isDisable());
+    }
+
+    private void disableAllButtons() {
+        addition.setDisable(true);
+        subtraction.setDisable(true);
+        multiplication.setDisable(true);
+        division.setDisable(true);
+        squared.setDisable(true);
+        squareRoot.setDisable(true);
+        equals.setDisable(true);
+        zero.setDisable(true);
+        one.setDisable(true);
+        two.setDisable(true);
+        three.setDisable(true);
+    }
+
+    private void enableAllButtons() {
+        addition.setDisable(false);
+        subtraction.setDisable(false);
+        multiplication.setDisable(false);
+        division.setDisable(false);
+        squared.setDisable(false);
+        squareRoot.setDisable(false);
+        equals.setDisable(false);
+        zero.setDisable(false);
+        one.setDisable(false);
+        two.setDisable(false);
+        three.setDisable(false);
     }
 }

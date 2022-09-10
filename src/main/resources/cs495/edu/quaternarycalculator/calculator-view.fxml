@@ -28,7 +28,7 @@
             <Button fx:id="three" layoutX="156.0" layoutY="10.0" mnemonicParsing="false" onAction="#onNumberButtonCLick" prefHeight="102.0" prefWidth="146.0" text="3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Button fx:id="multiplication" mnemonicParsing="false" onAction="#onOperationButtonClick" prefHeight="64.0" prefWidth="146.0" text="*" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Button fx:id="division" mnemonicParsing="false" onAction="#onOperationButtonClick" prefHeight="83.0" prefWidth="146.0" text="/" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <Button fx:id="convert" mnemonicParsing="false" onAction="#onEqualButtonClick" prefHeight="106.0" prefWidth="146.0" text="Convert" GridPane.rowIndex="1" />
+            <Button fx:id="convert" mnemonicParsing="false" onAction="#onConvertButtonClick" prefHeight="106.0" prefWidth="146.0" text="Convert" GridPane.rowIndex="1" />
             <Button fx:id="equals" mnemonicParsing="false" prefHeight="72.0" prefWidth="146.0" text="=" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#onEqualButtonClick" />
             <Button fx:id="squared" mnemonicParsing="false" prefHeight="74.0" prefWidth="146.0" text="x^2" GridPane.columnIndex="1" />
             <Button fx:id="squareRoot" mnemonicParsing="false" prefHeight="80.0" prefWidth="146.0" text="√" />
