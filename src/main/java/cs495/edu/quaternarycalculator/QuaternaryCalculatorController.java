@@ -21,6 +21,10 @@ public class QuaternaryCalculatorController {
     private Button multiplication;
     @FXML
     private Button division;
+    @FXML
+    private Button squared;
+    @FXML
+    private Button squareRoot;
 
     @FXML
     protected void onNumberButtonCLick(ActionEvent event) {
@@ -41,10 +45,7 @@ public class QuaternaryCalculatorController {
         prevQuaternary = displayedQuaternary;
         displayedQuaternary = "";
         numberDisplay.setText("");
-        addition.setDisable(true);
-        subtraction.setDisable(true);
-        multiplication.setDisable(true);
-        division.setDisable(true);
+        toggleOperations();
     }
 
     @FXML
@@ -53,9 +54,16 @@ public class QuaternaryCalculatorController {
         numberDisplay.setText(prevQuaternary + " " + operation + " " + displayedQuaternary);
         prevQuaternary = "";
         displayedQuaternary = "";
-        addition.setDisable(false);
-        subtraction.setDisable(false);
-        multiplication.setDisable(false);
-        division.setDisable(false);
+        toggleOperations();
+    }
+
+
+    private void toggleOperations() {
+        addition.setDisable(!addition.isDisable());
+        subtraction.setDisable(!subtraction.isDisable());
+        multiplication.setDisable(!multiplication.isDisable());
+        division.setDisable(!division.isDisable());
+        squared.setDisable(!squared.isDisable());
+        squareRoot.setDisable(!squareRoot.isDisable());
     }
 }
