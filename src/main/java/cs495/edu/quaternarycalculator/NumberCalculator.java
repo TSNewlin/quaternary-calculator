@@ -12,6 +12,7 @@ public class NumberCalculator {
             return Integer.toString(finalTotal, 4);
         }
     }
+
     public String add(String quaternary1, String quaternary2){
         int num1 = Integer.parseInt(quaternary1, 4);
         int num2 = Integer.parseInt(quaternary2, 4);
@@ -23,6 +24,7 @@ public class NumberCalculator {
             return Integer.toString(finalTotal, 4);
         }
     }
+
     public String multiply(String quaternary1, String quaternary2) {
         int num1 = Integer.parseInt(quaternary1, 4);
         int num2 = Integer.parseInt(quaternary2, 4);
@@ -34,6 +36,7 @@ public class NumberCalculator {
             return Integer.toString(finalTotal, 4);
         }
     }
+
     public String divide(String quaternary1, String quaternary2) {
         int num1 = Integer.parseInt(quaternary1, 4);
         int num2 = Integer.parseInt(quaternary2, 4);

@@ -19,6 +19,7 @@ public class TestNumberCalculator {
     public void testSubtract(String expected, String numberSubtractedFrom, String numberToSubtract){
         Assertions.assertEquals(expected,numberCalculator.subtract(numberSubtractedFrom, numberToSubtract));
     }
+
     @ParameterizedTest
     @CsvSource(value = {
             "10,3,1",
@@ -30,6 +31,7 @@ public class TestNumberCalculator {
     public void testAdd(String expected, String num1, String num2){
         Assertions.assertEquals(expected,numberCalculator.add(num1, num2));
     }
+
     @ParameterizedTest
     @CsvSource(value = {
             "3,3,1",
@@ -41,19 +43,17 @@ public class TestNumberCalculator {
     public void testMultiply(String expected, String num1, String num2){
         Assertions.assertEquals(expected,numberCalculator.multiply(num1, num2));
     }
+
     @ParameterizedTest
     @CsvSource(value = {
             "3,3,1",
             "undefined,2,0",
             "1,11,11",
             "2,302,112",
-            "1130,1111111,323"
+            "1130,1111111,323",
+            "2,13,3"
     })
     public void testDivide(String expected, String numerator, String denominator){
         Assertions.assertEquals(expected,numberCalculator.divide(numerator, denominator));
     }
-
-
-
-
 }
