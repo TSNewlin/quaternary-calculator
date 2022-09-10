@@ -2,7 +2,6 @@ package cs495.edu.tests;
 
 import cs495.edu.quaternarycalculator.NumberCalculator;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -34,13 +33,24 @@ public class TestNumberCalculator {
     @ParameterizedTest
     @CsvSource(value = {
             "3,3,1",
-            "0,-1,-2",
-            "1020,302,112",
-            "2202,1123,1013"
+            "2,-1,-2",
+            "11011,0011,1001",
+            "101030,302,112"
 
     })
     public void testMultiply(String expected, String num1, String num2){
-        Assertions.assertEquals(expected,numberCalculator.add(num1, num2));
+        Assertions.assertEquals(expected,numberCalculator.multiply(num1, num2));
+    }
+    @ParameterizedTest
+    @CsvSource(value = {
+            "3,3,1",
+            "undefined,2,0",
+            "1,11,11",
+            "2,302,112",
+            "1130,1111111,323"
+    })
+    public void testDivide(String expected, String numerator, String denominator){
+        Assertions.assertEquals(expected,numberCalculator.divide(numerator, denominator));
     }
 
 

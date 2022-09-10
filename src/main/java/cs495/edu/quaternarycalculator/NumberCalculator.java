@@ -34,6 +34,19 @@ public class NumberCalculator {
             return Integer.toString(finalTotal, 4);
         }
     }
-
-
+    public String divide(String quaternary1, String quaternary2) {
+        int num1 = Integer.parseInt(quaternary1, 4);
+        int num2 = Integer.parseInt(quaternary2, 4);
+        if (num2 > 0) {
+            int finalTotal = num1 / num2;
+            if (finalTotal < 1) {
+                return "0";
+            } else {
+                return Integer.toString(finalTotal, 4);
+            }
+        }
+        else{
+            return "undefined";
+        }
+    }
 }
