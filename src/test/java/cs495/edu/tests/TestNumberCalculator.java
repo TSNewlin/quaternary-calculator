@@ -56,4 +56,25 @@ public class TestNumberCalculator {
     public void testDivide(String expected, String numerator, String denominator){
         Assertions.assertEquals(expected,numberCalculator.divide(numerator, denominator));
     }
+
+    @ParameterizedTest
+    @CsvSource(value = {
+            "210,12",
+            "11221,103",
+            "121,11"
+
+    })
+    public void testSquared(String expected, String numberSquared){
+        Assertions.assertEquals(expected,numberCalculator.squared(numberSquared));
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {
+            "0,0",
+            "1,1"
+
+    })
+    public void testSquareRoot(String expected, String numberSquareRooted){
+        Assertions.assertEquals(expected,numberCalculator.squareRoot(numberSquareRooted));
+    }
 }
