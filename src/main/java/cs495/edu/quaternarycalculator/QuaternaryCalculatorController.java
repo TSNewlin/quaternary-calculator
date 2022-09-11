@@ -108,6 +108,14 @@ public class QuaternaryCalculatorController {
         numberDisplay.setText(displayedQuaternary);
     }
 
+    @FXML
+    protected void onSquareRootButtonClick() {
+        NumberCalculator calculator = new NumberCalculator();
+        newOperation = true;
+        displayedQuaternary = calculator.squareRoot(displayedQuaternary);
+        numberDisplay.setText(displayedQuaternary);
+    }
+
     private void toggleOperations() {
         addition.setDisable(!addition.isDisable());
         subtraction.setDisable(!subtraction.isDisable());
