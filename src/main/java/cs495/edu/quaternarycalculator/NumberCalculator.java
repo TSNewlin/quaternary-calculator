@@ -65,7 +65,7 @@ public class NumberCalculator {
         if (number < 0){
             return "0";
         }else {
-            String numSqRoot = Integer.toString(((int) Math.sqrt(number)));
+            String numSqRoot = Integer.toString(((int) Math.sqrt(number)), 4);
             return numSqRoot;
         }
 
