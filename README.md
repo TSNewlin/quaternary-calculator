@@ -17,6 +17,8 @@ The convert button will show the number in decimal. once it has been pressed you
 
 ![](screenshots/info4.png)
 
+Note: Spamming the "x^2" button will result in overflow
+
 ## **Meetings**
 
 9/8
@@ -27,7 +29,7 @@ Tyler, Noah, and Karim met in person to discuss diving final tasks and creating 
 
 ## **Task Distribution**
 
-Desirée- Create UI.
+Desirée- Create UI and README.md
 
 Tyler- Create decimal to quaternary and quaternary to decimal method as well as adding functionality to the UI.
 
