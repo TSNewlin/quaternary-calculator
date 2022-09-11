@@ -55,8 +55,13 @@ public class NumberCalculator {
 
     public String squared(String quaternary){
         int number = Integer.parseInt(quaternary, 4);
-        String numberSquare = Integer.toString(number * number, 4);
-        return numberSquare;
+        if (number < 0){
+            return "0";
+        }else {
+            String numberSquare = Integer.toString(number * number, 4);
+            return numberSquare;
+        }
+
     }
 
     public String squareRoot(String quaternary){
