@@ -17,7 +17,7 @@ The convert button will show the number in decimal. once it has been pressed you
 
 ![](screenshots/info4.png)
 
-**Meetings**
+## **Meetings**
 
 9/8
 The team (Desirée, Tyler, Noah, and Karim) all met in person. We discussed who would do what and then all worked on our portions of the assignment.
@@ -25,10 +25,13 @@ The team (Desirée, Tyler, Noah, and Karim) all met in person. We discussed who 
 9/9
 Tyler, Noah, and Karim met in person to discuss diving final tasks and creating tests.
 
-**Task Distribution**
+## **Task Distribution**
 
 Desirée- Create UI.
+
 Tyler- Create decimal to quaternary and quaternary to decimal method as well as adding functionality to the UI.
+
 Noah- Create squared functions as well as their tests.
+
 Karim- Make operations class and the tests. 
 
