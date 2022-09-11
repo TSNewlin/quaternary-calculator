@@ -61,8 +61,8 @@ public class TestNumberCalculator {
     @CsvSource(value = {
             "210,12",
             "11221,103",
-            "121,11"
-
+            "121,11",
+            "3010,32"
     })
     public void testSquared(String expected, String numberSquared){
         Assertions.assertEquals(expected,numberCalculator.squared(numberSquared));
@@ -71,7 +71,9 @@ public class TestNumberCalculator {
     @ParameterizedTest
     @CsvSource(value = {
             "0,0",
-            "1,1"
+            "32,3020",
+            "123,23121",
+            "10,100"
 
     })
     public void testSquareRoot(String expected, String numberSquareRooted){
